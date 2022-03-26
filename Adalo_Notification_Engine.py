@@ -122,14 +122,14 @@ with col1:
     created_at_after = str(created_at_after)+"T00:00:00.995"
     st.session_state.created_at_after = parser.parse(created_at_after)
 
-    st.text(st.session_state.created_at_after)
+    #st.text(st.session_state.created_at_after)
 
 with col2:
     updated_at_after = st.date_input('Updated After')
     updated_at_after = str(updated_at_after)+"T00:00:00.995"
     st.session_state.updated_at_after = parser.parse(updated_at_after)
 
-    st.text(st.session_state.updated_at_after)
+    #st.text(st.session_state.updated_at_after)
 
 
 st.markdown("""---""")
