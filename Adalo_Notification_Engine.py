@@ -137,7 +137,7 @@ st.markdown("""---""")
 
 records = []
 with col2:
-    if st.button("Retrieve Users"):
+    if st.button("Retrieve All Users"):
         headers = {
             'Authorization': "Bearer a2bdw98jjaesx1jfrh5n5l2lo",
             "Content-Type": "application/json"
@@ -214,7 +214,7 @@ with col1:
     body = st.text_input('The body of your notification', 'Test body')
 
 with col2:
-    if st.button("Send Notification"):
+    if st.button("Send  Notification"):
         # Headers are fixed for both API calls
         headers = {
             'Authorization': "Bearer a2bdw98jjaesx1jfrh5n5l2lo",
