@@ -137,7 +137,7 @@ if username in st.secrets["users"]["things_i_like"]:
 
     records = []
     with col2:
-        if st.button("Retrieve List of Users' Emails"):
+        if st.button("Retrieve Users"):
             headers = {
                 'Authorization': "Bearer a2bdw98jjaesx1jfrh5n5l2lo",
                 "Content-Type": "application/json"
