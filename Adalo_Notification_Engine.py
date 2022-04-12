@@ -185,15 +185,16 @@ for filter_name, filter in st.session_state.filters.items():
         pass
 
 filteredrecords = []
-for f, i in filters_.items():
     
-    for record in st.session_state.records_list:
-        include = True
+for record in st.session_state.records_list:
+    include = True
+    for f, i in filters_.items():
+        
         if record[f] not in i:
             include = False
         
-        if include and record not in filteredrecords:
-            filteredrecords.append(record)
+    if include and record not in filteredrecords:
+        filteredrecords.append(record)
 
 st.session_state.filteredrecords = filteredrecords
 
