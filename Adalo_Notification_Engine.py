@@ -190,10 +190,11 @@ for record in st.session_state.records_list:
     include = True
     for f, i in filters_.items():
         
-        if record[f] not in i:
-            include = False
-        else:
-            pass
+        if i:
+            if record[f] not in i:
+                include = False
+            else:
+                pass
         
     if include and record not in filteredrecords:
         filteredrecords.append(record)
