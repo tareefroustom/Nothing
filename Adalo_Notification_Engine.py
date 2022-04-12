@@ -195,8 +195,8 @@ for record in st.session_state.records_list:
         else:
             pass
         
-        if include and record not in filteredrecords:
-            filteredrecords.append(record)
+    if include and record not in filteredrecords:
+        filteredrecords.append(record)
 
 st.session_state.filteredrecords = filteredrecords
 
