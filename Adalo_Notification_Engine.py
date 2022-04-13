@@ -139,11 +139,11 @@ records = []
 with col2:
     if st.button("Retrieve All Users"):
         headers = {
-            'Authorization': "Bearer a2bdw98jjaesx1jfrh5n5l2lo",
+            'Authorization': f"Bearer {st.session_state.AppAPI}",
             "Content-Type": "application/json"
         }
         for i in range(0, 3000, 100):
-            url = f"https://api.adalo.com/v0/apps/7a236e7c-cba2-48fd-b61b-3584186ff918/collections/t_1da86ee63a5e4e35abfd359b2d89e275?offset={i}&limit=100"
+            url = f"https://api.adalo.com/v0/apps/{st.session_state.AppId}/collections/{st.session_state.UsersCollectionId}?offset={i}&limit=100"
             Property = st.session_state.Date_filter_one
             response = requests.get(url, headers=headers)
             for property in response.json()["records"]:
