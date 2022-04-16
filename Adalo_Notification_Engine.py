@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
-import stqdm
+from stqdm import stqdm
+
 
 import streamlit as st
 import datetime
