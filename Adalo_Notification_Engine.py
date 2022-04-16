@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-
+import stqdm
 
 import streamlit as st
 import datetime
@@ -228,7 +228,7 @@ with col2:
             'Authorization': "Bearer a2bdw98jjaesx1jfrh5n5l2lo",
             "Content-Type": "application/json"
         }
-        for email in finallistofemails:
+        for email in stqdm(finallistofemails):
             url = "https://api.adalo.com/notifications"
 
             data = {
@@ -239,4 +239,4 @@ with col2:
             }
 
             response = requests.post(url, json=data, headers=headers)
-            st.text(response.status_code)
+
