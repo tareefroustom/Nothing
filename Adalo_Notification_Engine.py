@@ -233,7 +233,7 @@ with col2:
             url = "https://api.adalo.com/notifications"
 
             data = {
-                "appId": "7a236e7c-cba2-48fd-b61b-3584186ff918",
+                "appId": st.session_state.AppId,
                 "audience": {"email": email},
                 "notification": {"titleText": title,
                                  "bodyText": body}
