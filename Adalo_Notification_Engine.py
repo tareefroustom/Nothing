@@ -229,7 +229,7 @@ with col2:
             'Authorization': "Bearer a2bdw98jjaesx1jfrh5n5l2lo",
             "Content-Type": "application/json"
         }
-        for email in stqdm(finallistofemails):
+        for email in finallistofemails:
             url = "https://api.adalo.com/notifications"
 
             data = {
